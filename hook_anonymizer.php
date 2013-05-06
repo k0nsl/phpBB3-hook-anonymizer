@@ -17,6 +17,18 @@ if (!defined('IN_PHPBB'))
 function hook_inject_anonymizer(&$hook)
 {
    /* should I simply echo the JS stuff here, or..? */
+   
+   echo '
+
+<script src="http://cdn.mastrcoder.com/js/anonymize.js" type="text/javascript"></script>
+ 
+<script type="text/javascript"><!--
+protected_links = "";
+ 
+auto_anonymize();
+//--></script>   
+   
+        ';
 }
 
 /**
